@@ -22,3 +22,39 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.card {
+    background-color: lightyellow;
+    /*background-image: url('https://media.giphy.com/media/2U16e3nEkPXOg/giphy.gif');*/
+    width: 200px;
+    padding: 15px;
+    box-shadow: 2px 2px 5px black;
+    border: solid 1px black;
+    background-size: cover;
+    display: inline-block;
+    margin: 20px;
+}
+
+.card-title {
+
+}
+
+.card-text {
+
+}
+
+.img-fadein {
+    animation: fadeIn;
+    animation-duration: 3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        rotation: 0;
+    }
+    to {
+        opacity: 1;
+        rotation: 100000deg;
+    }
+}

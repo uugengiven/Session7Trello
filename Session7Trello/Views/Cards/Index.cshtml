@@ -1,0 +1,36 @@
+﻿
+@{
+
+                ViewBag.Title = "Cards";
+}
+
+@foreach (var category in Model)
+{
+<div class="category">
+    @category.Name
+    @foreach (var card in category.Notes)
+    {
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">@card.Title</h5>
+                <h6 class="card-title">@card.Category.Name</h6>
+                <p class="card-text">@card.Text</p>
+            </div>
+        </div>
+
+    }
+</div>
+}
+
+
+<form action="/cards/create" method="post">
+    <input type="text" name="Title" /> (Title) <br />
+    <input type="text" name="Text" /> (Text) <br />
+    <select name="Category">
+        @foreach (var category in ViewBag.Categories)
+        {      
+            <option value="@category.Id">@category.Name</option>
+        }
+    </select>
+    <input type="submit" />
+</form>
